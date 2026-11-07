@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<!-- Developed by Muhammad Younus — Web Developer | Portfolio: https://younasahmad782.github.io/portfolio/ -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURELIA — Fine Dining in Downtown Dubai | Luxury Restaurant</title>
+<meta name="description" content="AURELIA — an exceptional fine dining restaurant in Downtown Dubai. Signature dishes, grilled specialties, seafood, desserts and elegant private dining. Reserve your table or order on WhatsApp.">
+<meta name="keywords" content="restaurant in Dubai, fine dining Dubai, best restaurant in Dubai, dining experience Dubai, luxury restaurant Downtown Dubai, AURELIA Dubai">
+<meta name="author" content="Muhammad Younus">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AURELIA — Fine Dining in Downtown Dubai">
+<meta property="og:description" content="Where taste meets elegance. Signature dishes, chef's specials and private dining in the heart of Downtown Dubai.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta name="theme-color" content="#151515">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23151515'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23C8A96B' font-family='serif'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "AURELIA — Fine Dining Dubai",
+  "description": "Luxury fine dining restaurant in Downtown Dubai. Signature dishes, grilled specialties, seafood, desserts and private dining.",
+  "servesCuisine": ["Fine Dining", "Middle Eastern", "International"],
+  "priceRange": "AED 35 - AED 550",
+  "address": { "@type": "PostalAddress", "streetAddress": "Boulevard Point, Downtown Dubai", "addressLocality": "Dubai", "addressCountry": "AE" },
+  "telephone": "+92-345-7305226"
+}
+</script>
+<style>
+/* ============================================================
+   AURELIA — Luxury Dubai Restaurant (demo brand)
+   Customise everything in the CONFIG object at the bottom
+   of this file (brand, phone, WhatsApp, menu, offers, gallery).
+   ============================================================ */
+:root{
+  --charcoal:#151515; --charcoal-soft:#1e1e1e; --brown:#30251E;
+  --gold:#C8A96B; --gold-dark:#a98d4f; --gold-soft:#EFE6D2;
+  --ivory:#F8F5EF; --ivory-dark:#EFEAE0; --white:#fff;
+  --muted:#6E6A63; --muted-light:#9a958c; --line:#E7DFCE;
+  --shadow:0 18px 50px rgba(21,21,21,.12); --shadow-sm:0 8px 26px rgba(21,21,21,.09);
+  --serif:'Cormorant Garamond','Amiri',Georgia,serif; --sans:'Jost','Tajawal',system-ui,sans-serif;
+  --radius:4px; --radius-lg:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--charcoal);line-height:1.65;font-weight:400;overflow-x:hidden}
+html[lang="ar"] body{font-family:'Tajawal',var(--sans)}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;line-height:1.15}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .serif{font-family:'Amiri',serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit;font-size:1rem}
+.container{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:44px;height:1px;background:var(--gold)}
+.sec-title{font-size:clamp(2rem,4.4vw,3.2rem);margin:16px 0 14px}
+.sec-sub{color:var(--muted);max-width:640px;font-size:1.06rem;font-weight:300}
+.sec-sub.center{margin:0 auto}
+.center{text-align:center}
+.dark-sec{background:var(--charcoal);color:#F1EDE4}
+.dark-sec .sec-sub{color:rgba(241,237,228,.72)}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 34px;font-size:.86rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:all .3s;border:1px solid transparent;white-space:nowrap}
+.btn svg{width:17px;height:17px;flex:none}
+html[dir="rtl"] .btn svg{transform:scaleX(-1)}
+.btn-gold{background:var(--gold);color:#151515}
+.btn-gold:hover{background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(200,169,107,.35)}
+.btn-outline{border-color:rgba(255,255,255,.65);color:#fff}
+.btn-outline:hover{background:#fff;color:#151515;border-color:#fff}
+.btn-outline-dark{border-color:var(--charcoal);color:var(--charcoal)}
+.btn-outline-dark:hover{background:var(--charcoal);color:#fff}
+.btn-sm{padding:11px 24px;font-size:.78rem}
+/* ---------- header ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,box-shadow .4s,padding .4s;padding:22px 0}
+.site-header .container{display:flex;align-items:center;gap:26px}
+.site-header.scrolled{background:rgba(21,21,21,.96);box-shadow:0 10px 34px rgba(0,0,0,.35);padding:12px 0}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-mark{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.5rem;color:var(--gold);font-weight:700}
+.logo-name{font-family:var(--serif);font-size:1.55rem;letter-spacing:.22em;color:#fff;font-weight:700;line-height:1}
+.logo-tag{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.42em;color:var(--gold);margin-top:5px;text-transform:uppercase}
+.main-nav{display:flex;gap:22px;margin-inline-start:auto}
+.main-nav a{color:rgba(255,255,255,.86);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:400;position:relative;padding:6px 0;transition:color .25s;white-space:nowrap}
+.main-nav a::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+.main-nav a:hover,.main-nav a.active{color:var(--gold)}
+.main-nav a:hover::after,.main-nav a.active::after{width:100%}
+.header-actions{display:flex;align-items:center;gap:12px}
+.lang-toggle{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:50px;overflow:hidden;flex:none}
+.lang-toggle button{padding:8px 15px;font-size:.8rem;letter-spacing:.08em;color:#fff;transition:all .25s}
+.lang-toggle button.active{background:var(--gold);color:#151515;font-weight:600}
+.header-reserve{padding:12px 24px}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:10px;z-index:110}
+.hamburger span{width:26px;height:2px;background:#fff;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{position:fixed;inset:0;background:rgba(21,21,21,.98);z-index:105;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.mobile-nav.open{opacity:1;visibility:visible}
+.mobile-nav a{font-family:var(--serif);font-size:1.9rem;color:#fff;padding:8px}
+.mobile-nav a:hover{color:var(--gold)}
+.mobile-nav .btn{margin-top:18px}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:140px 0 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 9s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.18)}to{transform:scale(1.08)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.62) 0%,rgba(21,21,21,.42) 45%,rgba(21,21,21,.78) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:920px;padding:0 24px;animation:heroUp 1.1s ease both .15s}
+@keyframes heroUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+.hero .eyebrow{justify-content:center;color:var(--gold);letter-spacing:.4em}
+.hero .eyebrow::after{content:"";width:44px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(2.9rem,7.2vw,5.4rem);font-weight:600;margin:22px 0 18px;line-height:1.08}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:1.18rem;font-weight:300;color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 38px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.75);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint::after{content:"";width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero-strip{position:relative;z-index:3;max-width:920px;margin:-58px auto 0;background:var(--white);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.hero-strip>div{padding:26px 18px;text-align:center}
+.hero-strip>div+div{border-inline-start:1px solid var(--line)}
+.hero-strip .ic{font-size:1.4rem;color:var(--gold);margin-bottom:6px}
+.hero-strip b{display:block;font-family:var(--serif);font-size:1.12rem;color:var(--charcoal)}
+.hero-strip span{font-size:.88rem;color:var(--muted)}
+/* ---------- story ---------- */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.story-media{position:relative}
+.story-media .img-main{width:100%;height:560px;object-fit:cover}
+.story-media .img-small{position:absolute;bottom:-36px;inset-inline-end:-22px;width:250px;height:190px;object-fit:cover;border:8px solid var(--ivory);box-shadow:var(--shadow)}
+.story-media .badge{position:absolute;top:24px;inset-inline-start:-18px;background:var(--charcoal);color:#fff;padding:16px 22px;text-align:center}
+.story-media .badge b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--gold);line-height:1}
+.story-media .badge span{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase}
+.story p{color:var(--muted);margin-bottom:16px;font-weight:300}
+.story-stats{display:flex;gap:44px;margin:30px 0 34px}
+.story-stats b{display:block;font-family:var(--serif);font-size:2.2rem;color:var(--charcoal)}
+.story-stats span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+/* ---------- menu ---------- */
+.menu-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:44px 0 34px}
+.menu-filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{padding:10px 20px;border:1px solid var(--line);background:#fff;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--charcoal);transition:all .25s}
+.filter-btn:hover{border-color:var(--gold);color:var(--gold-dark)}
+.filter-btn.active{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+.menu-search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:0 16px;min-width:260px}
+.menu-search input{border:none;outline:none;padding:12px 0;flex:1;background:transparent}
+.menu-search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.dish{background:#fff;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s,box-shadow .35s;animation:fadeUp .5s ease both}
+.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.dish-img{position:relative;height:230px;overflow:hidden}
+.dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.dish:hover .dish-img img{transform:scale(1.07)}
+.dish-tag{position:absolute;top:14px;inset-inline-start:14px;background:var(--gold);color:#151515;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:6px 12px}
+.dish-tag.sample{inset-inline-start:auto;inset-inline-end:14px;background:rgba(21,21,21,.82);color:#fff}
+.dish-body{padding:24px 24px 26px}
+.dish-cat{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-dark);font-weight:500}
+.dish-body h3{font-size:1.45rem;margin:8px 0 6px}
+.dish-body p{font-size:.94rem;color:var(--muted);font-weight:300;min-height:44px}
+.dish-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.dish-price{font-family:var(--serif);font-size:1.35rem;color:var(--charcoal);font-weight:700}
+.dish-price small{font-size:.72rem;color:var(--muted);font-family:var(--sans);letter-spacing:.08em}
+.add-btn{border:1px solid var(--charcoal);padding:10px 18px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;transition:all .25s}
+.add-btn:hover{background:var(--gold);border-color:var(--gold);color:#151515}
+.add-btn.added{background:var(--gold);border-color:var(--gold);color:#151515}
+.menu-empty{display:none;text-align:center;color:var(--muted);padding:60px 0;font-size:1.1rem}
+/* ---------- specials / experiences ---------- */
+.specials-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+.special-main{position:relative;min-height:520px;overflow:hidden;display:flex;align-items:flex-end;color:#fff}
+.special-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.special-main:hover img{transform:scale(1.05)}
+.special-main::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(21,21,21,.88))}
+.special-main .txt{position:relative;z-index:2;padding:36px}
+.special-main h3{font-size:2rem;margin:10px 0 8px}
+.special-main p{color:rgba(255,255,255,.85);font-weight:300;max-width:460px}
+.special-side{display:grid;grid-template-rows:1fr 1fr;gap:28px}
+.special-card{position:relative;overflow:hidden;display:flex;align-items:flex-end;color:#fff;min-height:246px}
+.special-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.special-card:hover img{transform:scale(1.05)}
+.special-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(21,21,21,.88))}
+.special-card .txt{position:relative;z-index:2;padding:26px}
+.special-card h3{font-size:1.5rem;margin:6px 0 4px}
+.special-card p{color:rgba(255,255,255,.85);font-size:.92rem;font-weight:300}
+.kicker{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+/* ---------- offers ---------- */
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.offer-card{background:#fff;box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .35s,box-shadow .35s}
+.offer-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.offer-card img{width:100%;height:210px;object-fit:cover}
+.offer-body{padding:26px}
+.offer-body h3{font-size:1.5rem;margin:8px 0 8px}
+.offer-body p{color:var(--muted);font-size:.95rem;font-weight:300;min-height:48px}
+.offer-price{font-family:var(--serif);font-size:1.3rem;color:var(--gold-dark);font-weight:700;margin:14px 0 18px}
+.offer-price s{color:var(--muted-light);font-size:1rem;margin-inline-start:8px}
+.offer-price small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.sample-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:26px}
+/* ---------- experiences ---------- */
+.exp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.exp-card{position:relative;height:380px;overflow:hidden;color:#fff;display:flex;align-items:flex-end}
+.exp-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.exp-card:hover img{transform:scale(1.07)}
+.exp-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(21,21,21,.9))}
+.exp-card .txt{position:relative;z-index:2;padding:22px}
+.exp-card h3{font-size:1.3rem;margin-bottom:4px}
+.exp-card p{font-size:.85rem;color:rgba(255,255,255,.85);font-weight:300}
+/* ---------- gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g-item{position:relative;height:280px;overflow:hidden;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.g-item:hover img{transform:scale(1.08)}
+.g-item::after{content:"+";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff;background:rgba(21,21,21,.45);opacity:0;transition:opacity .35s;font-family:var(--serif)}
+.g-item:hover::after{opacity:1}
+.g-item.wide{grid-column:span 2}
+.lightbox{position:fixed;inset:0;background:rgba(10,10,10,.94);z-index:200;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:min(92vw,1000px);max-height:76vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox p{color:#fff;font-family:var(--serif);font-size:1.25rem}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2.6rem;padding:16px;line-height:1;transition:color .25s}
+.lb-btn:hover{color:var(--gold)}
+.lb-prev{inset-inline-start:18px}
+.lb-next{inset-inline-end:18px}
+.lb-close{position:absolute;top:22px;inset-inline-end:26px;color:#fff;font-size:2.2rem;padding:10px}
+/* ---------- reservation ---------- */
+.res-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.res-info h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 16px}
+.res-info p{color:var(--muted);font-weight:300;margin-bottom:26px}
+.res-meta{display:grid;gap:16px}
+.res-meta div{display:flex;gap:14px;align-items:flex-start}
+.res-meta .ic{color:var(--gold);font-size:1.25rem;line-height:1.4}
+.res-meta b{display:block;font-family:var(--serif);font-size:1.1rem}
+.res-meta span{color:var(--muted);font-size:.92rem}
+.res-form{background:#fff;padding:40px;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);margin-bottom:7px;font-weight:500}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--ivory);padding:13px 15px;outline:none;transition:border .25s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field.error input,.field.error select{border-color:#b3261e}
+.field .err{display:none;color:#b3261e;font-size:.78rem;margin-top:5px}
+.field.error .err{display:block}
+.phone-wrap{display:flex}
+.phone-wrap select{width:108px;flex:none;border-inline-end:none}
+.res-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+.res-success{display:none;background:#f3efe4;border:1px solid var(--gold);padding:26px;text-align:center}
+.res-success h3{font-size:1.5rem;margin-bottom:8px}
+.res-success p{color:var(--muted);font-size:.95rem}
+/* ---------- testimonials ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi{background:#fff;padding:34px;box-shadow:var(--shadow-sm);position:relative}
+.testi .stars{color:var(--gold);letter-spacing:4px;font-size:1.05rem;margin-bottom:14px}
+.testi p{font-family:var(--serif);font-size:1.22rem;font-style:italic;line-height:1.5;color:var(--brown)}
+.testi footer{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:center;gap:14px}
+.testi footer img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.testi footer b{display:block;font-size:.95rem}
+.testi footer span{font-size:.82rem;color:var(--muted)}
+.testi .sample-tag{position:absolute;top:14px;inset-inline-end:14px;background:rgba(21,21,21,.8);color:#fff;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px}
+/* ---------- location ---------- */
+.loc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;box-shadow:var(--shadow)}
+.loc-info{background:var(--charcoal);color:#F1EDE4;padding:52px 46px}
+.loc-info h2{font-size:2rem;margin:12px 0 20px}
+.loc-info ul{list-style:none;display:grid;gap:18px;margin:26px 0 30px}
+.loc-info li{display:flex;gap:14px}
+.loc-info .ic{color:var(--gold);font-size:1.2rem;line-height:1.4}
+.loc-info b{display:block;font-size:.95rem;letter-spacing:.06em}
+.loc-info span{color:rgba(241,237,228,.7);font-size:.92rem;font-weight:300}
+.loc-map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .25s}
+.socials a:hover{background:var(--gold);border-color:var(--gold);color:#151515}
+.socials svg{width:18px;height:18px}
+/* ---------- instagram ---------- */
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:40px}
+.insta-grid a{position:relative;height:200px;overflow:hidden;display:block}
+.insta-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.insta-grid a:hover img{transform:scale(1.08)}
+.insta-grid a::after{content:"";position:absolute;inset:0;background:rgba(21,21,21,.25);opacity:0;transition:opacity .3s}
+.insta-grid a:hover::after{opacity:1}
+/* ---------- footer ---------- */
+.site-footer{background:var(--charcoal);color:rgba(241,237,228,.8);padding:76px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding-bottom:52px}
+.site-footer h4{color:#fff;font-family:var(--serif);font-size:1.25rem;margin-bottom:20px}
+.footer-about p{font-size:.94rem;font-weight:300;color:rgba(241,237,228,.66);margin:18px 0 22px}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:11px}
+.footer-links a{font-size:.92rem;transition:color .25s,padding .25s}
+.footer-links a:hover{color:var(--gold);padding-inline-start:5px}
+.footer-contact{list-style:none;display:grid;gap:13px;font-size:.92rem}
+.footer-contact li{display:flex;gap:10px}
+.footer-contact svg{width:17px;height:17px;flex:none;color:var(--gold);margin-top:3px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;text-align:center;font-size:.88rem;color:rgba(241,237,228,.55)}
+.footer-dev{display:block;margin-top:7px;font-size:.84rem}
+.footer-dev a{color:var(--gold);font-weight:600;text-decoration:none}
+.footer-dev a:hover{text-decoration:underline}
+/* ---------- order drawer / float ---------- */
+.wa-float{position:fixed;bottom:26px;inset-inline-end:26px;z-index:90;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(37,211,102,.45);transition:transform .25s}
+.wa-float:hover{transform:scale(1.09)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+.order-bar{position:fixed;bottom:26px;inset-inline-start:26px;z-index:90;display:none;align-items:center;gap:12px;background:var(--charcoal);color:#fff;padding:14px 20px;box-shadow:var(--shadow);cursor:pointer}
+.order-bar.show{display:flex}
+.order-bar .count{background:var(--gold);color:#151515;font-weight:700;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.order-bar .total{font-family:var(--serif);font-size:1.1rem;color:var(--gold)}
+.order-drawer{position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(430px,94vw);background:#fff;z-index:210;box-shadow:-20px 0 60px rgba(0,0,0,.25);transform:translateX(105%);transition:transform .4s;display:flex;flex-direction:column}
+html[dir="rtl"] .order-drawer{transform:translateX(-105%)}
+.order-drawer.open{transform:none}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-size:1.4rem}
+.drawer-close{font-size:1.8rem;line-height:1;padding:6px}
+.drawer-items{flex:1;overflow-y:auto;padding:10px 24px}
+.drawer-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.drawer-item img{width:64px;height:64px;object-fit:cover;flex:none}
+.drawer-item .nm{flex:1}
+.drawer-item .nm b{display:block;font-family:var(--serif);font-size:1.05rem}
+.drawer-item .nm span{font-size:.84rem;color:var(--muted)}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:28px;height:28px;border:1px solid var(--line);font-size:1rem;line-height:1}
+.drawer-foot{padding:22px 24px;border-top:1px solid var(--line)}
+.drawer-foot .row{display:flex;justify-content:space-between;margin-bottom:16px;font-size:1.05rem}
+.drawer-foot .row b{font-family:var(--serif);font-size:1.3rem}
+.drawer-empty{padding:40px 0;text-align:center;color:var(--muted)}
+.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.nav-overlay.show{opacity:1;visibility:visible}
+.toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,140%);background:var(--charcoal);color:#fff;padding:14px 26px;font-size:.92rem;z-index:300;transition:transform .4s;box-shadow:var(--shadow);max-width:92vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+/* ---------- responsive ---------- */
+@media (max-width:1200px){
+  .main-nav{gap:20px}
+  .header-reserve{display:none}
+}
+@media (max-width:1024px){
+  .main-nav{display:none}
+  .hamburger{display:flex}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .exp-grid{grid-template-columns:repeat(3,1fr)}
+  .exp-card:nth-child(4),.exp-card:nth-child(5){grid-column:span 1}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .g-item.wide{grid-column:span 2}
+  .offer-grid{grid-template-columns:repeat(2,1fr)}
+  .offer-card:last-child{grid-column:span 2}
+  .testi-grid{grid-template-columns:1fr;max-width:640px;margin:0 auto}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .res-grid{grid-template-columns:1fr;gap:48px}
+  .loc-grid{grid-template-columns:1fr}
+  .loc-map iframe{min-height:340px}
+  .specials-grid{grid-template-columns:1fr}
+  .special-main{min-height:440px}
+}
+@media (max-width:860px){
+  section{padding:70px 0}
+  .story-grid{grid-template-columns:1fr;gap:56px}
+  .story-media .img-small{inset-inline-end:0}
+  .story-media .badge{inset-inline-start:0}
+  .story-stats{flex-wrap:wrap;gap:20px 32px}
+  .hero-strip{grid-template-columns:1fr;margin:-30px 18px 0}
+  .hero-strip>div+div{border-inline-start:none;border-top:1px solid var(--line)}
+  .menu-grid{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr}
+  .exp-card{height:300px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .offer-grid{grid-template-columns:1fr}
+  .offer-card:last-child{grid-column:auto}
+  .form-row{grid-template-columns:1fr}
+  .res-form{padding:28px 22px}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-grid a{height:170px}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .loc-info{padding:40px 26px}
+  .logo-tag{display:none}
+}
+@media (max-width:480px){
+  .container{padding:0 18px}
+  .logo-name{font-size:1.25rem}
+  .logo-mark{width:40px;height:40px;font-size:1.25rem}
+  .lang-toggle button{padding:7px 11px}
+  .header-actions .btn{display:none}
+  .hero h1{font-size:2.5rem}
+  .hero p{font-size:1.05rem}
+  .hero-cta .btn{padding:14px 22px}
+  .gallery-grid{grid-template-columns:1fr}
+  .g-item.wide{grid-column:auto}
+  .wa-float{width:54px;height:54px;bottom:18px;inset-inline-end:18px}
+  .order-bar{bottom:18px;inset-inline-start:18px;padding:12px 16px}
+}
+@media (max-width:380px){
+  .logo-mark{display:none}
+  .logo-name{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a class="logo" href="#home" aria-label="AURELIA home">
+      <span class="logo-mark">A</span>
+      <span><span class="logo-name" data-name>AURELIA</span><span class="logo-tag" data-i18n="logo_tag">Fine Dining · Dubai</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="active" data-i18n="nav_home">Home</a>
+      <a href="#story" data-i18n="nav_story">Our Story</a>
+      <a href="#menu" data-i18n="nav_menu">Menu</a>
+      <a href="#experiences" data-i18n="nav_exp">Experiences</a>
+      <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">English</button>
+        <button type="button" data-lang="ar">العربية</button>
+      </div>
+      <a class="btn btn-gold header-reserve" href="#reservation" data-i18n="nav_reserve">Reserve a Table</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#home" data-i18n="nav_home">Home</a>
+  <a href="#story" data-i18n="nav_story">Our Story</a>
+  <a href="#menu" data-i18n="nav_menu">Menu</a>
+  <a href="#experiences" data-i18n="nav_exp">Experiences</a>
+  <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <a class="btn btn-gold" href="#reservation" data-i18n="nav_reserve">Reserve a Table</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Elegant fine dining restaurant interior in Dubai"></div>
+  <div class="hero-inner">
+    <p class="eyebrow" data-i18n="hero_label">An Exceptional Dining Experience</p>
+    <h1 data-i18n="hero_title">Where Taste Meets <em>Elegance</em></h1>
+    <p data-i18n="hero_sub">Discover an unforgettable culinary journey, crafted with passion and inspired by exceptional flavors.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#menu"><span data-i18n="hero_cta_menu">Explore Our Menu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-outline" href="#reservation" data-i18n="hero_cta_reserve">Reserve Your Table</a>
+    </div>
+  </div>
+  <div class="scroll-hint" data-i18n="hero_scroll">Scroll</div>
+</section>
+
+<!-- Hero info strip -->
+<div class="container">
+  <div class="hero-strip reveal">
+    <div><div class="ic">◷</div><b data-i18n="info_hours_t">Opening Hours</b><span data-i18n="info_hours_v">Daily 12 PM – 11 PM</span></div>
+    <div><div class="ic">⌖</div><b data-i18n="info_loc_t">Location</b><span data-i18n="info_loc_v">Downtown Dubai, UAE</span></div>
+    <div><div class="ic">☎</div><b data-i18n="info_call_t">Reservations</b><span dir="ltr">+92 345 7305226</span></div>
+  </div>
+</div>
+
+<!-- ================= STORY ================= -->
+<section id="story">
+  <div class="container story-grid">
+    <div class="story-media reveal">
+      <img class="img-main" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1000&q=80" alt="AURELIA restaurant interior with elegant dining tables">
+      <img class="img-small" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Beautifully set table at AURELIA">
+      <div class="badge"><b>5★</b><span data-i18n="story_badge">Fine Dining</span></div>
+    </div>
+    <div class="story reveal">
+      <p class="eyebrow" data-i18n="story_label">Our Story</p>
+      <h2 class="sec-title" data-i18n="story_title">More Than Dining. An Experience.</h2>
+      <p data-i18n="story_p1">In the heart of Downtown Dubai, AURELIA brings together fire, flavour and finesse. Every plate leaves our kitchen as a small piece of theatre — seasonal ingredients, honest technique, and presentation worthy of the occasion.</p>
+      <p data-i18n="story_p2">From slow-braised lamb to charcoal-grilled seafood, our kitchen honours the classics of Middle Eastern hospitality while embracing the polish of international fine dining. The room is calm, the service is warm, and every table is set like it matters — because it does.</p>
+      <div class="story-stats">
+        <div><b>24</b><span data-i18n="story_stat1">Signature Dishes</span></div>
+        <div><b>8</b><span data-i18n="story_stat2">Menu Categories</span></div>
+        <div><b>5★</b><span data-i18n="story_stat3">Dining Experience</span></div>
+      </div>
+      <a class="btn btn-outline-dark" href="#experiences" data-i18n="story_cta">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu" style="background:var(--white)">
+  <div class="container">
+    <div class="center reveal">
+      <p class="eyebrow center" data-i18n="menu_label">Signature Menu</p>
+      <h2 class="sec-title" data-i18n="menu_title">A Feast for the Senses</h2>
+      <p class="sec-sub center" data-i18n="menu_sub">Every dish is prepared to order from fresh, seasonal ingredients. Prices in AED — tap a category or search the menu.</p>
+    </div>
+    <div class="menu-tools reveal">
+      <div class="menu-filters" id="menuFilters" role="group" aria-label="Menu categories"></div>
+      <label class="menu-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="menuSearch" data-i18n-ph="menu_search_ph" placeholder="Search the menu…">
+      </label>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="menu-empty" id="menuEmpty" data-i18n="menu_empty">No dishes match your search — try another word.</p>
+    <p class="sample-note" data-i18n="menu_sample_note">Sample menu — demonstration dishes and prices. Replace with the restaurant's real menu.</p>
+  </div>
+</section>
+
+<!-- ================= CHEF'S SPECIALS ================= -->
+<section id="specials" class="dark-sec">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="specials_label">Chef's Specials</p>
+      <h2 class="sec-title" data-i18n="specials_title">Crafted to Be Remembered</h2>
+      <p class="sec-sub" data-i18n="specials_sub">The dishes our chef is proudest of — and the experiences guests travel across Dubai for.</p>
+    </div>
+    <div class="specials-grid" style="margin-top:44px">
+      <article class="special-main reveal">
+        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1200&q=80" alt="Chef's seven-course tasting menu presentation">
+        <div class="txt">
+          <span class="kicker" data-i18n="special1_k">Chef's Recommendation</span>
+          <h3 data-i18n="special1_t">The Seven-Course Tasting Menu</h3>
+          <p data-i18n="special1_d">A journey through the kitchen's finest work — seven courses, paired flavours, one unforgettable evening. AED 450 per guest.</p>
+          <a class="btn btn-gold btn-sm" style="margin-top:18px" href="#reservation" data-i18n="special_cta">Reserve This Experience</a>
+        </div>
+      </article>
+      <div class="special-side">
+        <article class="special-card reveal">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=900&q=80" alt="Gold-leaf kunafa dessert">
+          <div class="txt">
+            <span class="kicker" data-i18n="special2_k">Signature Dessert</span>
+            <h3 data-i18n="special2_t">Gold-Leaf Kunafa</h3>
+            <p data-i18n="special2_d">Crisp kunafa, saffron syrup, pistachio cream. AED 95.</p>
+          </div>
+        </article>
+        <article class="special-card reveal">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80" alt="Wagyu tomahawk steak for two">
+          <div class="txt">
+            <span class="kicker" data-i18n="special3_k">For Two</span>
+            <h3 data-i18n="special3_t">Wagyu Tomahawk</h3>
+            <p data-i18n="special3_d">Charcoal-grilled, carved at the table. AED 550.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFERS ================= -->
+<section id="offers">
+  <div class="container">
+    <div class="center reveal">
+      <p class="eyebrow center" data-i18n="offers_label">Exclusive Offers</p>
+      <h2 class="sec-title" data-i18n="offers_title">Moments Worth Booking For</h2>
+      <p class="sec-sub center" data-i18n="offers_sub">Seasonal packages and set menus — every offer is a sample and can be replaced with the restaurant's real promotions.</p>
+    </div>
+    <div class="offer-grid" id="offerGrid" style="margin-top:44px"></div>
+    <p class="sample-note" data-i18n="offers_sample_note">Sample offers — demonstration content only.</p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCES ================= -->
+<section id="experiences" style="background:var(--white)">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="exp_label">The Dining Experience</p>
+      <h2 class="sec-title" data-i18n="exp_title">Choose How You Dine</h2>
+      <p class="sec-sub" data-i18n="exp_sub">Five ways to enjoy AURELIA — each space is styled for a different kind of evening. Facilities shown are demonstration categories; confirm availability with the restaurant.</p>
+    </div>
+    <div class="exp-grid" id="expGrid" style="margin-top:44px"></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="dark-sec">
+  <div class="container">
+    <div class="center reveal">
+      <p class="eyebrow center" data-i18n="gallery_label">Gallery</p>
+      <h2 class="sec-title" data-i18n="gallery_title">A Feast for the Eyes</h2>
+      <p class="sec-sub center" data-i18n="gallery_sub">Signature dishes, the dining room, and evenings at AURELIA. Tap any image to view it full-screen.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid" style="margin-top:44px"></div>
+  </div>
+</section>
+
+<!-- ================= RESERVATION ================= -->
+<section id="reservation">
+  <div class="container res-grid">
+    <div class="res-info reveal">
+      <p class="eyebrow" data-i18n="res_label">Reservations</p>
+      <h2 data-i18n="res_title">Your Table Awaits</h2>
+      <p data-i18n="res_sub">Request a table and our team will confirm your booking. A request is not confirmed until the restaurant approves it.</p>
+      <div class="res-meta">
+        <div><span class="ic">◷</span><div><b data-i18n="res_hours_t">Opening Hours</b><span data-i18n="res_hours_v">Daily 12 PM – 11 PM · Friday 4 PM – 12 AM</span></div></div>
+        <div><span class="ic">⌖</span><div><b data-i18n="res_loc_t">Location</b><span data-i18n="res_loc_v">Boulevard Point, Downtown Dubai, UAE</span></div></div>
+        <div><span class="ic">☎</span><div><b data-i18n="res_call_t">Call or WhatsApp</b><span dir="ltr">+92 345 7305226</span></div></div>
+      </div>
+    </div>
+    <form class="res-form reveal" id="resForm" novalidate>
+      <div class="form-row">
+        <div class="field" id="fName"><label for="rName" data-i18n="res_f_name">Full Name *</label><input id="rName" type="text" autocomplete="name"><span class="err" data-i18n="err_required">This field is required.</span></div>
+        <div class="field" id="fPhone"><label for="rPhone" data-i18n="res_f_phone">Phone Number *</label><div class="phone-wrap"><select id="rCode" aria-label="Country code"><option value="+971" selected>+971</option><option value="+92">+92</option><option value="+966">+966</option><option value="+91">+91</option><option value="+1">+1</option><option value="+44">+44</option></select><input id="rPhone" type="tel" autocomplete="tel" placeholder="50 123 4567"></div><span class="err" data-i18n="err_phone">Enter a valid phone number.</span></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="rEmail" data-i18n="res_f_email">Email Address</label><input id="rEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="field" id="fGuests"><label for="rGuests" data-i18n="res_f_guests">Number of Guests *</label><select id="rGuests"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select><span class="err" data-i18n="err_required">This field is required.</span></div>
+      </div>
+      <div class="form-row">
+        <div class="field" id="fDate"><label for="rDate" data-i18n="res_f_date">Reservation Date *</label><input id="rDate" type="date"><span class="err" data-i18n="err_required">This field is required.</span></div>
+        <div class="field" id="fTime"><label for="rTime" data-i18n="res_f_time">Reservation Time *</label><select id="rTime"><option value="">—</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option></select><span class="err" data-i18n="err_required">This field is required.</span></div>
+      </div>
+      <div class="field"><label for="rNotes" data-i18n="res_f_notes">Special Requests</label><textarea id="rNotes" rows="3" data-i18n-ph="res_notes_ph" placeholder="Birthday, window seat, dietary needs…"></textarea></div>
+      <button class="btn btn-gold" type="submit" style="width:100%" data-i18n="res_submit">Request Reservation</button>
+      <p class="res-note" data-i18n="res_note">Your request is sent to the restaurant for approval — it is not a confirmed booking until they reply.</p>
+      <div class="res-success" id="resSuccess">
+        <h3 data-i18n="res_ok_t">Request received</h3>
+        <p data-i18n="res_ok_d">Thank you — your reservation request has been noted. The restaurant will confirm your table shortly.</p>
+        <a class="btn btn-outline-dark btn-sm" id="resWaBtn" href="#" target="_blank" rel="noopener" style="margin-top:18px" data-i18n="res_ok_wa">Send it on WhatsApp too</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" style="background:var(--white)">
+  <div class="container">
+    <div class="center reveal">
+      <p class="eyebrow center" data-i18n="testi_label">Guest Words</p>
+      <h2 class="sec-title" data-i18n="testi_title">What Guests Say</h2>
+      <p class="sec-sub center" data-i18n="testi_sub">Sample reviews for demonstration — replace with verified guest feedback.</p>
+    </div>
+    <div class="testi-grid" id="testiGrid" style="margin-top:44px"></div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="center reveal" style="margin-bottom:44px">
+      <p class="eyebrow center" data-i18n="loc_label">Visit Us</p>
+      <h2 class="sec-title" data-i18n="loc_title">Find Us in Dubai</h2>
+    </div>
+    <div class="loc-grid reveal">
+      <div class="loc-info">
+        <p class="eyebrow" data-i18n="loc_info_label">AURELIA · Downtown Dubai</p>
+        <h2 data-i18n="loc_info_t">Downtown Dubai, UAE</h2>
+        <ul>
+          <li><span class="ic">⌖</span><div><b data-i18n="loc_addr_t">Address</b><span data-i18n="loc_addr_v">Boulevard Point, Downtown Dubai, UAE — sample address, replace with the real one.</span></div></li>
+          <li><span class="ic">◷</span><div><b data-i18n="loc_hours_t">Opening Hours</b><span data-i18n="loc_hours_v">Daily 12 PM – 11 PM · Friday 4 PM – 12 AM</span></div></li>
+          <li><span class="ic">☎</span><div><b data-i18n="loc_phone_t">Phone &amp; WhatsApp</b><span dir="ltr">+92 345 7305226</span></div></li>
+          <li><span class="ic">✉</span><div><b data-i18n="loc_email_t">Email</b><span>hello@aurelia-dubai.example</span></div></li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-gold btn-sm" id="dirBtn" href="https://www.google.com/maps/dir/?api=1&destination=Boulevard+Point+Downtown+Dubai" target="_blank" rel="noopener" data-i18n="loc_dir_btn">Get Directions</a>
+          <a class="btn btn-outline btn-sm" id="callBtn" href="tel:+923457305226" data-i18n="loc_call_btn">Call Now</a>
+        </div>
+        <div class="socials" style="margin-top:28px" id="socials"></div>
+      </div>
+      <div class="loc-map"><iframe title="AURELIA location map — Downtown Dubai" src="https://www.google.com/maps?q=Boulevard+Point,+Downtown+Dubai&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section id="instagram" style="padding-top:0">
+  <div class="container center reveal">
+    <p class="eyebrow center" data-i18n="insta_label">Follow Along</p>
+    <h2 class="sec-title" data-i18n="insta_title">AURELIA on Instagram</h2>
+    <p class="sec-sub center" data-i18n="insta_sub">Plates, evenings and behind-the-scenes moments from the dining room.</p>
+    <a class="btn btn-outline-dark btn-sm" id="instaFollow" href="#" target="_blank" rel="noopener" style="margin-top:22px" data-i18n="insta_follow">Follow on Instagram</a>
+    <div class="insta-grid" id="instaGrid"></div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="logo" href="#home"><span class="logo-mark">A</span><span><span class="logo-name" data-name>AURELIA</span><span class="logo-tag" data-i18n="logo_tag">Fine Dining · Dubai</span></span></a>
+        <p data-i18n="footer_about">A luxury fine dining restaurant in Downtown Dubai — fire, flavour and finesse, served in a calm and elegant room.</p>
+        <div class="socials" id="socialsFoot"></div>
+      </div>
+      <div>
+        <h4 data-i18n="footer_links_t">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#home" data-i18n="nav_home">Home</a></li>
+          <li><a href="#story" data-i18n="nav_story">Our Story</a></li>
+          <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
+          <li><a href="#experiences" data-i18n="nav_exp">Experiences</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#reservation" data-i18n="nav_reserve">Reserve a Table</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_menu_t">From the Menu</h4>
+        <ul class="footer-links" id="footerMenuLinks"></ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contact_t">Contact</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="footer_addr">Boulevard Point, Downtown Dubai, UAE</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span dir="ltr">+92 345 7305226</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-i18n="footer_hours">Daily 12 PM – 11 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><span data-i18n="footer_copy">© <span id="year">2026</span> AURELIA — All rights reserved.</span>
+    <span class="footer-dev"><span data-i18n="footer_dev">Developed by</span> <a href="https://younasahmad782.github.io/portfolio/" target="_blank" rel="noopener">Muhammad Younus</a></span></div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- Order bar + drawer -->
+<div class="order-bar" id="orderBar" role="button" tabindex="0" aria-label="View your order">
+  <span class="count" id="orderCount">0</span><span data-i18n="order_bar">Your Order</span><span class="total" id="orderTotal">AED 0</span>
+</div>
+<aside class="order-drawer" id="orderDrawer" aria-label="Your order">
+  <div class="drawer-head"><h3 data-i18n="drawer_title">Your Order</h3><button class="drawer-close" id="drawerClose" aria-label="Close">×</button></div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="row"><span data-i18n="drawer_total">Total</span><b id="drawerTotal">AED 0</b></div>
+    <a class="btn btn-gold" id="drawerWa" href="#" target="_blank" rel="noopener" style="width:100%" data-i18n="drawer_wa">Order via WhatsApp</a>
+    <p class="res-note" data-i18n="drawer_note">Your order opens in WhatsApp — the restaurant confirms it there.</p>
+  </div>
+</aside>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+/* ============================================================
+   CONFIG — edit only this object to rebrand the site.
+   ⚠ SAMPLE contact: phone/WhatsApp below are the OWNER'S demo
+   number (+92 345 7305226). Replace with the restaurant's own
+   UAE number before client use. Socials are sample handles.
+   ============================================================ */
+const CONFIG = {
+  name: { en: "AURELIA", ar: "أوريليا" },
+  tagline: { en: "Fine Dining · Dubai", ar: "مطعم فاخر · دبي" },
+  phoneDisplay: "+92 345 7305226",
+  phoneLink: "+923457305226",
+  whatsapp: "923457305226",
+  address: { en: "Boulevard Point, Downtown Dubai, UAE", ar: "بوليفارد بوينت، داون تاون دبي، الإمارات" },
+  hours: { en: "Daily 12 PM – 11 PM", ar: "يوميًا 12 ظهرًا – 11 مساءً" },
+  mapQuery: "Boulevard Point, Downtown Dubai",
+  currency: "AED",
+  socials: { instagram: "https://instagram.com/aurelia.dubai", facebook: "https://facebook.com/aurelia.dubai", tiktok: "https://tiktok.com/@aurelia.dubai" },
+  categories: [
+    { id: "signature", en: "Signature Dishes", ar: "الأطباق المميزة" },
+    { id: "starters", en: "Starters", ar: "المقبلات" },
+    { id: "mains", en: "Main Courses", ar: "الأطباق الرئيسية" },
+    { id: "grilled", en: "Grilled Specialties", ar: "المشويات" },
+    { id: "seafood", en: "Seafood", ar: "المأكولات البحرية" },
+    { id: "desserts", en: "Desserts", ar: "الحلويات" },
+    { id: "beverages", en: "Beverages", ar: "المشروبات" },
+    { id: "specials", en: "Chef's Specials", ar: "اختيارات الشيف" }
+  ],
+  menu: [
+    { id: 1, cat: "signature", price: 145, img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80", sample: true, name: { en: "Golden Saffron Risotto", ar: "ريزوتو الزعفران الذهبي" }, desc: { en: "Arborio rice, saffron, aged parmesan, truffle oil.", ar: "أرز أربوريو بالزعفران وجبنة البارميزان المعتّقة وزيت الكمأة." } },
+    { id: 2, cat: "signature", price: 285, img: "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80", bestseller: true, sample: true, name: { en: "Wagyu Beef Tenderloin", ar: "فيليه لحم الواغيو" }, desc: { en: "Charcoal-grilled wagyu, red wine jus, roasted roots.", ar: "واغيو مشوي على الفحم مع صلصة النبيذ الأحمر وخضار مشوية." } },
+    { id: 3, cat: "signature", price: 320, img: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80", bestseller: true, sample: true, name: { en: "Lobster Thermidor", ar: "لوبستر ثيرميدور" }, desc: { en: "Butter-poached lobster, cognac cream, gruyère gratin.", ar: "لوبستر مسلوق بالزبدة مع كريمة الكونياك وجبنة الغرويير." } },
+    { id: 4, cat: "starters", price: 85, img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80", sample: true, name: { en: "Burrata & Heirloom Tomato", ar: "بوراتا وطماطم إرثية" }, desc: { en: "Creamy burrata, heirloom tomatoes, basil oil, sourdough.", ar: "بوراتا كريمية مع طماطم إرثية وزيت الريحان وخبز العجين المخمر." } },
+    { id: 5, cat: "starters", price: 95, img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80", sample: true, name: { en: "Tuna Tartare", ar: "تارتار التونة" }, desc: { en: "Yellowfin tuna, avocado, sesame, citrus ponzu.", ar: "تونة صفراء الزعانف مع الأفوكادو والسمسم وصلصة البونزو الحمضية." } },
+    { id: 6, cat: "starters", price: 110, img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80", sample: true, name: { en: "Arabic Mezze Platter", ar: "طبق المقبلات العربية" }, desc: { en: "Hummus, baba ganoush, tabbouleh, olives, warm pita.", ar: "حمص وبابا غنوج وتبولة وزيتون مع خبز بيتا دافئ." } },
+    { id: 7, cat: "mains", price: 175, img: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80", sample: true, name: { en: "Slow-Braised Lamb Shank", ar: "ساق الضأن المطهوة ببطء" }, desc: { en: "Twelve-hour lamb, saffron rice, toasted almonds.", ar: "لحم ضأن مطهو ببطء لاثنتي عشرة ساعة مع أرز بالزعفران ولوز محمص." } },
+    { id: 8, cat: "mains", price: 185, img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80", sample: true, name: { en: "Pan-Seared Salmon", ar: "سلمون مشوي" }, desc: { en: "Atlantic salmon, lemon butter, asparagus, herb oil.", ar: "سلمون أطلسي مع زبدة الليمون والهليون وزيت الأعشاب." } },
+    { id: 9, cat: "mains", price: 95, img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&q=80", sample: true, name: { en: "Royal Chicken Biryani", ar: "برياني الدجاج الملكي" }, desc: { en: "Aged basmati, saffron, charred chicken, raita.", ar: "أرز بسمتي معتّق بالزعفران ودجاج مشوي وصلصة الرايتا." } },
+    { id: 10, cat: "grilled", price: 195, img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80", bestseller: true, sample: true, name: { en: "Mixed Grill Platter", ar: "طبق المشويات المشكلة" }, desc: { en: "Shish tawook, lamb kofta, beef skewers, grilled vegetables.", ar: "شيش طاووق وكفتة لحم وأسياخ لحم بقري مع خضار مشوية." } },
+    { id: 11, cat: "grilled", price: 85, img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80", sample: true, name: { en: "Charcoal Shish Tawook", ar: "شيش طاووق على الفحم" }, desc: { en: "Charcoal chicken, garlic toum, pickles, fries.", ar: "دجاج على الفحم مع ثومية ومخللات وبطاطس مقلية." } },
+    { id: 12, cat: "grilled", price: 165, img: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80", sample: true, name: { en: "Grilled Tiger Prawns", ar: "روبيان نمري مشوي" }, desc: { en: "Tiger prawns, garlic butter, chilli, lemon.", ar: "روبيان نمري مع زبدة الثوم والفلفل الحار والليمون." } },
+    { id: 13, cat: "seafood", price: 195, img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80", sample: true, name: { en: "Grilled Hammour", ar: "هامور مشوي" }, desc: { en: "Line-caught hammour, saffron butter, grilled lemon.", ar: "هامور طازج مع زبدة الزعفران وليمون مشوي." } },
+    { id: 14, cat: "seafood", price: 145, img: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&q=80", sample: true, name: { en: "Butter Garlic Prawns", ar: "روبيان بزبدة الثوم" }, desc: { en: "Prawns, garlic butter, parsley, toasted sourdough.", ar: "روبيان مع زبدة الثوم والبقدونس وخبز محمص." } },
+    { id: 15, cat: "seafood", price: 220, img: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80", sample: true, name: { en: "Seafood Paella", ar: "باييا المأكولات البحرية" }, desc: { en: "Saffron rice, prawns, mussels, calamari, peas.", ar: "أرز بالزعفران مع الروبيان وبلح البحر والكاليماري والبازلاء." } },
+    { id: 16, cat: "desserts", price: 55, img: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80", sample: true, name: { en: "Saffron Milk Cake", ar: "كيك الحليب بالزعفران" }, desc: { en: "Saffron tres leches, pistachio, rose petals.", ar: "كيك الحليب بالزعفران مع الفستق وبتلات الورد." } },
+    { id: 17, cat: "desserts", price: 65, img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80", sample: true, name: { en: "Chocolate Fondant", ar: "فوندان الشوكولاتة" }, desc: { en: "Dark chocolate fondant, vanilla gelato, gold leaf.", ar: "فوندان الشوكولاتة الداكنة مع آيس كريم الفانيليا وورق الذهب." } },
+    { id: 18, cat: "desserts", price: 45, img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80", sample: true, name: { en: "Umm Ali", ar: "أم علي" }, desc: { en: "Warm bread pudding, nuts, cream, cinnamon.", ar: "بودينغ الخبز الدافئ مع المكسرات والقشطة والقرفة." } },
+    { id: 19, cat: "beverages", price: 35, img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80", sample: true, name: { en: "Fresh Mint Lemonade", ar: "ليموناضة بالنعناع" }, desc: { en: "Lemon, mint, crushed ice.", ar: "ليمون ونعناع وثلج مجروش." } },
+    { id: 20, cat: "beverages", price: 40, img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80", sample: true, name: { en: "Arabic Coffee & Dates", ar: "قهوة عربية وتمر" }, desc: { en: "Cardamom Arabic coffee, Medjool dates.", ar: "قهوة عربية بالهيل مع تمر المجهول." } },
+    { id: 21, cat: "beverages", price: 55, img: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80", sample: true, name: { en: "Saffron Mocktail", ar: "موكتيل الزعفران" }, desc: { en: "Saffron, orange blossom, soda, pomegranate.", ar: "زعفران وماء زهر البرتقال وصودا ورمان." } },
+    { id: 22, cat: "specials", price: 450, img: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80", bestseller: true, sample: true, name: { en: "Chef's Tasting Menu", ar: "قائمة تذوق الشيف" }, desc: { en: "Seven courses from the kitchen's finest work.", ar: "سبعة أطباق مختارة من أفضل ما يقدمه المطبخ." } },
+    { id: 23, cat: "specials", price: 95, img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80", bestseller: true, sample: true, name: { en: "Gold-Leaf Kunafa", ar: "كنافة بورق الذهب" }, desc: { en: "Crisp kunafa, saffron syrup, pistachio cream.", ar: "كنافة مقرمشة مع شراب الزعفران وكريمة الفستق." } },
+    { id: 24, cat: "specials", price: 550, img: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80", sample: true, name: { en: "Wagyu Tomahawk (for two)", ar: "توماهوك واغيو (لشخصين)" }, desc: { en: "Charcoal-grilled, carved at the table.", ar: "مشوي على الفحم ويُقطَّع على الطاولة." } }
+  ],
+  offers: [
+    { img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=80", price: 89, was: 120, sample: true, tag: { en: "Sunday – Thursday", ar: "الأحد – الخميس" }, title: { en: "Business Lunch", ar: "غداء الأعمال" }, desc: { en: "Two courses, 12–3 PM, served at a business pace.", ar: "طبقان من 12 إلى 3 ظهرًا، بإيقاع يناسب يوم العمل." } },
+    { img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=900&q=80", price: 349, was: 420, sample: true, tag: { en: "For Four", ar: "لأربعة أشخاص" }, title: { en: "Family Dining", ar: "عشاء العائلة" }, desc: { en: "Mixed grill, mezze and desserts — a feast for the whole table.", ar: "مشويات مشكلة ومقبلات وحلويات — وليمة للعائلة كلها." } },
+    { img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80", price: 799, was: 900, sample: true, tag: { en: "Weekend", ar: "عطلة نهاية الأسبوع" }, title: { en: "Weekend Indulgence", ar: "دلال نهاية الأسبوع" }, desc: { en: "Tasting menu for two with signature mocktails.", ar: "قائمة تذوق لشخصين مع موكتيلات مميزة." } }
+  ],
+  experiences: [
+    { img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80", title: { en: "Indoor Dining", ar: "تناول الطعام الداخلي" }, desc: { en: "A calm, candle-lit dining room.", ar: "قاعة طعام هادئة مضاءة بالشموع." } },
+    { img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80", title: { en: "Outdoor Seating", ar: "جلسات خارجية" }, desc: { en: "Terrace evenings under the Dubai sky.", ar: "أمسيات على التراس تحت سماء دبي." } },
+    { img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80", title: { en: "Private Dining", ar: "تناول الطعام الخاص" }, desc: { en: "A private room for up to 14 guests.", ar: "غرفة خاصة تتسع لـ 14 ضيفًا." } },
+    { img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&q=80", title: { en: "Family Experience", ar: "تجربة العائلة" }, desc: { en: "Sharing platters made for the whole table.", ar: "أطباق مشاركة لجميع أفراد العائلة." } },
+    { img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80", title: { en: "Special Events", ar: "المناسبات الخاصة" }, desc: { en: "Birthdays, proposals and celebrations.", ar: "أعياد ميلاد ومناسبات واحتفالات." } }
+  ],
+  gallery: [
+    { img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1000&q=80", wide: true, cap: { en: "Signature plate", ar: "طبق مميز" } },
+    { img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80", cap: { en: "From the kitchen", ar: "من المطبخ" } },
+    { img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80", cap: { en: "Behind the scenes", ar: "خلف الكواليس" } },
+    { img: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80", cap: { en: "The dining room", ar: "قاعة الطعام" } },
+    { img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=80", wide: true, cap: { en: "Evenings at AURELIA", ar: "أمسيات في أوريليا" } },
+    { img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80", cap: { en: "Evenings at the bar", ar: "أمسيات في البار" } },
+    { img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80", cap: { en: "Gold-leaf dessert", ar: "حلوى ورق الذهب" } },
+    { img: "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=80", cap: { en: "The chef's table", ar: "طاولة الشيف" } }
+  ],
+  testimonials: [
+    { stars: 5, img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80", name: "Sarah M.", meta: { en: "Guest from Dubai", ar: "ضيفة من دبي" }, text: { en: "The tasting menu was the best meal we've had in Dubai — every course felt considered.", ar: "كانت قائمة التذوق أفضل وجبة تناولناها في دبي — كل طبق كان مدروسًا بعناية." } },
+    { stars: 5, img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80", name: "Khalid S.", meta: { en: "Guest from Abu Dhabi", ar: "ضيف من أبوظبي" }, text: { en: "Booked for a birthday — the private room and the service made it unforgettable.", ar: "حجزت لعيد ميلاد — الغرفة الخاصة والخدمة جعلتا الأمسية لا تُنسى." } },
+    { stars: 4, img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80", name: "Ahmed R.", meta: { en: "Guest from Sharjah", ar: "ضيف من الشارقة" }, text: { en: "Beautiful room, generous portions, and the kunafa alone is worth the visit.", ar: "قاعة جميلة وحصص سخية، والكنافة وحدها تستحق الزيارة." } }
+  ],
+  instagram: [
+    "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&q=80",
+    "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+    "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80",
+    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80",
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+  ]
+};
+
+const I18N = {
+  en: {
+    logo_tag: "Fine Dining · Dubai",
+    nav_home: "Home", nav_story: "Our Story", nav_menu: "Menu", nav_exp: "Experiences", nav_gallery: "Gallery", nav_contact: "Contact", nav_reserve: "Reserve a Table",
+    hero_label: "An Exceptional Dining Experience",
+    hero_title: "Where Taste Meets <em>Elegance</em>",
+    hero_sub: "Discover an unforgettable culinary journey, crafted with passion and inspired by exceptional flavors.",
+    hero_cta_menu: "Explore Our Menu", hero_cta_reserve: "Reserve Your Table", hero_scroll: "Scroll",
+    info_hours_t: "Opening Hours", info_hours_v: "Daily 12 PM – 11 PM",
+    info_loc_t: "Location", info_loc_v: "Downtown Dubai, UAE",
+    info_call_t: "Reservations",
+    story_badge: "Fine Dining", story_label: "Our Story",
+    story_title: "More Than Dining. An Experience.",
+    story_p1: "In the heart of Downtown Dubai, AURELIA brings together fire, flavour and finesse. Every plate leaves our kitchen as a small piece of theatre — seasonal ingredients, honest technique, and presentation worthy of the occasion.",
+    story_p2: "From slow-braised lamb to charcoal-grilled seafood, our kitchen honours the classics of Middle Eastern hospitality while embracing the polish of international fine dining. The room is calm, the service is warm, and every table is set like it matters — because it does.",
+    story_stat1: "Signature Dishes", story_stat2: "Menu Categories", story_stat3: "Dining Experience",
+    story_cta: "Discover Our Story",
+    menu_label: "Signature Menu", menu_title: "A Feast for the Senses",
+    menu_sub: "Every dish is prepared to order from fresh, seasonal ingredients. Prices in AED — tap a category or search the menu.",
+    menu_search_ph: "Search the menu…", menu_empty: "No dishes match your search — try another word.",
+    menu_sample_note: "Sample menu — demonstration dishes and prices. Replace with the restaurant's real menu.",
+    specials_label: "Chef's Specials", specials_title: "Crafted to Be Remembered",
+    specials_sub: "The dishes our chef is proudest of — and the experiences guests travel across Dubai for.",
+    special1_k: "Chef's Recommendation", special1_t: "The Seven-Course Tasting Menu",
+    special1_d: "A journey through the kitchen's finest work — seven courses, paired flavours, one unforgettable evening. AED 450 per guest.",
+    special_cta: "Reserve This Experience",
+    special2_k: "Signature Dessert", special2_t: "Gold-Leaf Kunafa", special2_d: "Crisp kunafa, saffron syrup, pistachio cream. AED 95.",
+    special3_k: "For Two", special3_t: "Wagyu Tomahawk", special3_d: "Charcoal-grilled, carved at the table. AED 550.",
+    offers_label: "Exclusive Offers", offers_title: "Moments Worth Booking For",
+    offers_sub: "Seasonal packages and set menus — every offer is a sample and can be replaced with the restaurant's real promotions.",
+    offers_sample_note: "Sample offers — demonstration content only.",
+    exp_label: "The Dining Experience", exp_title: "Choose How You Dine",
+    exp_sub: "Five ways to enjoy AURELIA — each space is styled for a different kind of evening. Facilities shown are demonstration categories; confirm availability with the restaurant.",
+    gallery_label: "Gallery", gallery_title: "A Feast for the Eyes",
+    gallery_sub: "Signature dishes, the dining room, and evenings at AURELIA. Tap any image to view it full-screen.",
+    res_label: "Reservations", res_title: "Your Table Awaits",
+    res_sub: "Request a table and our team will confirm your booking. A request is not confirmed until the restaurant approves it.",
+    res_hours_t: "Opening Hours", res_hours_v: "Daily 12 PM – 11 PM · Friday 4 PM – 12 AM",
+    res_loc_t: "Location", res_loc_v: "Boulevard Point, Downtown Dubai, UAE",
+    res_call_t: "Call or WhatsApp",
+    res_f_name: "Full Name *", res_f_phone: "Phone Number *", res_f_email: "Email Address",
+    res_f_guests: "Number of Guests *", res_f_date: "Reservation Date *", res_f_time: "Reservation Time *",
+    res_f_notes: "Special Requests", res_notes_ph: "Birthday, window seat, dietary needs…",
+    res_submit: "Request Reservation",
+    res_note: "Your request is sent to the restaurant for approval — it is not a confirmed booking until they reply.",
+    res_ok_t: "Request received",
+    res_ok_d: "Thank you — your reservation request has been noted. The restaurant will confirm your table shortly.",
+    res_ok_wa: "Send it on WhatsApp too",
+    err_required: "This field is required.", err_phone: "Enter a valid phone number.",
+    testi_label: "Guest Words", testi_title: "What Guests Say",
+    testi_sub: "Sample reviews for demonstration — replace with verified guest feedback.",
+    loc_label: "Visit Us", loc_title: "Find Us in Dubai",
+    loc_info_label: "AURELIA · Downtown Dubai", loc_info_t: "Downtown Dubai, UAE",
+    loc_addr_t: "Address", loc_addr_v: "Boulevard Point, Downtown Dubai, UAE — sample address, replace with the real one.",
+    loc_hours_t: "Opening Hours", loc_hours_v: "Daily 12 PM – 11 PM · Friday 4 PM – 12 AM",
+    loc_phone_t: "Phone & WhatsApp", loc_email_t: "Email",
+    loc_dir_btn: "Get Directions", loc_call_btn: "Call Now",
+    insta_label: "Follow Along", insta_title: "AURELIA on Instagram",
+    insta_sub: "Plates, evenings and behind-the-scenes moments from the dining room.",
+    insta_follow: "Follow on Instagram",
+    footer_about: "A luxury fine dining restaurant in Downtown Dubai — fire, flavour and finesse, served in a calm and elegant room.",
+    footer_links_t: "Explore", footer_menu_t: "From the Menu", footer_contact_t: "Contact",
+    footer_addr: "Boulevard Point, Downtown Dubai, UAE", footer_hours: "Daily 12 PM – 11 PM",
+    footer_copy: "© {year} AURELIA — All rights reserved.", footer_dev: "Developed by",
+    order_bar: "Your Order", drawer_title: "Your Order", drawer_total: "Total",
+    drawer_empty: "Your order is empty — add a dish from the menu.",
+    drawer_wa: "Order via WhatsApp", drawer_note: "Your order opens in WhatsApp — the restaurant confirms it there.",
+    toast_ar: "Switched to Arabic", toast_en: "Switched to English",
+    wa_order_msg: "Hello AURELIA, I would like to order:",
+    wa_general_msg: "Hello AURELIA, I would like to make an enquiry.",
+    wa_res_msg: "Hello AURELIA, I would like to request a table reservation:",
+    add_btn: "Add to Order", added_btn: "Added ✓",
+    bestseller_badge: "Bestseller", sample_badge: "Sample", all_cat: "All"
+  },
+  ar: {
+    logo_tag: "مطعم فاخر · دبي",
+    nav_home: "الرئيسية", nav_story: "قصتنا", nav_menu: "القائمة", nav_exp: "التجارب", nav_gallery: "المعرض", nav_contact: "تواصل معنا", nav_reserve: "احجز طاولة",
+    hero_label: "تجربة طعام استثنائية",
+    hero_title: "حيث يلتقي <em>المذاق بالفخامة</em>",
+    hero_sub: "اكتشف رحلة طعام لا تُنسى، صُنعت بشغف وألهمتها نكهات استثنائية.",
+    hero_cta_menu: "استكشف قائمتنا", hero_cta_reserve: "احجز طاولتك", hero_scroll: "مرّر للأسفل",
+    info_hours_t: "ساعات العمل", info_hours_v: "يوميًا 12 ظهرًا – 11 مساءً",
+    info_loc_t: "الموقع", info_loc_v: "داون تاون دبي، الإمارات",
+    info_call_t: "الحجوزات",
+    story_badge: "طعام فاخر", story_label: "قصتنا",
+    story_title: "أكثر من مجرد طعام، إنها تجربة استثنائية",
+    story_p1: "في قلب داون تاون دبي، يجمع مطعم أوريليا بين النار والنكهة والأناقة. كل طبق يخرج من مطبخنا كقطعة مسرحية صغيرة — مكونات موسمية، وتقنية صادقة، وتقديم يليق بالمناسبة.",
+    story_p2: "من لحم الضأن المطهو ببطء إلى المأكولات البحرية المشوية على الفحم، يحتفي مطبخنا بكلاسيكيات الضيافة الشرق أوسطية مع لمسة من أناقة الطعام الفاخر العالمي. القاعة هادئة، والخدمة دافئة، وكل طاولة تُجهَّز وكأنها مهمة — لأنها كذلك.",
+    story_stat1: "طبقًا مميزًا", story_stat2: "فئات في القائمة", story_stat3: "تجربة طعام",
+    story_cta: "اكتشف قصتنا",
+    menu_label: "القائمة المميزة", menu_title: "وليمة للحواس",
+    menu_sub: "كل طبق يُحضَّر عند الطلب من مكونات طازجة موسمية. الأسعار بالدرهم — اختر فئة أو ابحث في القائمة.",
+    menu_search_ph: "ابحث في القائمة…", menu_empty: "لا توجد أطباق تطابق بحثك — جرّب كلمة أخرى.",
+    menu_sample_note: "قائمة تجريبية — أطباق وأسعار للعرض. استبدلها بقائمة المطعم الحقيقية.",
+    specials_label: "اختيارات الشيف", specials_title: "صُنعت لتُتذكَّر",
+    specials_sub: "الأطباق التي يفخر بها الشيف — والتجارب التي يأتي الضيوف من أنحاء دبي من أجلها.",
+    special1_k: "توصية الشيف", special1_t: "قائمة التذوق من سبعة أطباق",
+    special1_d: "رحلة عبر أفضل ما يقدمه المطبخ — سبعة أطباق ونكهات متناسقة وأمسية لا تُنسى. 450 درهمًا للضيف.",
+    special_cta: "احجز هذه التجربة",
+    special2_k: "حلوى مميزة", special2_t: "كنافة بورق الذهب", special2_d: "كنافة مقرمشة مع شراب الزعفران وكريمة الفستق. 95 درهمًا.",
+    special3_k: "لشخصين", special3_t: "توماهوك واغيو", special3_d: "مشوي على الفحم ويُقطَّع على الطاولة. 550 درهمًا.",
+    offers_label: "عروض حصرية", offers_title: "لحظات تستحق الحجز",
+    offers_sub: "باقات موسمية وقوائم ثابتة — كل عرض تجريبي ويمكن استبداله بعروض المطعم الحقيقية.",
+    offers_sample_note: "عروض تجريبية — محتوى للعرض فقط.",
+    exp_label: "تجربة تناول الطعام", exp_title: "اختر كيف تتناول طعامك",
+    exp_sub: "خمس طرق للاستمتاع بأوريليا — كل مساحة مصممة لأمسية مختلفة. المرافق المعروضة فئات توضيحية؛ تأكد من التوفر مع المطعم.",
+    gallery_label: "المعرض", gallery_title: "وليمة للعيون",
+    gallery_sub: "أطباق مميزة وقاعة الطعام وأمسيات في أوريليا. اضغط على أي صورة لعرضها بملء الشاشة.",
+    res_label: "الحجوزات", res_title: "طاولتكم بانتظاركم",
+    res_sub: "اطلب طاولة وسيؤكد فريقنا حجزك. الطلب غير مؤكد حتى يوافق عليه المطعم.",
+    res_hours_t: "ساعات العمل", res_hours_v: "يوميًا 12 ظهرًا – 11 مساءً · الجمعة 4 عصرًا – 12 منتصف الليل",
+    res_loc_t: "الموقع", res_loc_v: "بوليفارد بوينت، داون تاون دبي، الإمارات",
+    res_call_t: "اتصال أو واتساب",
+    res_f_name: "الاسم الكامل *", res_f_phone: "رقم الهاتف *", res_f_email: "البريد الإلكتروني",
+    res_f_guests: "عدد الضيوف *", res_f_date: "تاريخ الحجز *", res_f_time: "وقت الحجز *",
+    res_f_notes: "طلبات خاصة", res_notes_ph: "عيد ميلاد، مقعد قرب النافذة، احتياجات غذائية…",
+    res_submit: "اطلب الحجز",
+    res_note: "يُرسَل طلبك إلى المطعم للموافقة عليه — وليس حجزًا مؤكدًا حتى يردوا عليك.",
+    res_ok_t: "تم استلام الطلب",
+    res_ok_d: "شكرًا لك — تم تسجيل طلب الحجز الخاص بك. سيؤكد المطعم طاولتك قريبًا.",
+    res_ok_wa: "أرسله عبر واتساب أيضًا",
+    err_required: "هذا الحقل مطلوب.", err_phone: "أدخل رقم هاتف صحيحًا.",
+    testi_label: "كلمات الضيوف", testi_title: "ماذا يقول الضيوف",
+    testi_sub: "مراجعات تجريبية للعرض — استبدلها بآراء حقيقية موثّقة.",
+    loc_label: "زورونا", loc_title: "زورونا في دبي",
+    loc_info_label: "أوريليا · داون تاون دبي", loc_info_t: "داون تاون دبي، الإمارات",
+    loc_addr_t: "العنوان", loc_addr_v: "بوليفارد بوينت، داون تاون دبي، الإمارات — عنوان تجريبي، استبدله بالعنوان الحقيقي.",
+    loc_hours_t: "ساعات العمل", loc_hours_v: "يوميًا 12 ظهرًا – 11 مساءً · الجمعة 4 عصرًا – 12 منتصف الليل",
+    loc_phone_t: "الهاتف وواتساب", loc_email_t: "البريد الإلكتروني",
+    loc_dir_btn: "الاتجاهات", loc_call_btn: "اتصل الآن",
+    insta_label: "تابعنا", insta_title: "أوريليا على إنستغرام",
+    insta_sub: "أطباق وأمسيات ولحظات من خلف الكواليس في قاعة الطعام.",
+    insta_follow: "تابعنا على إنستغرام",
+    footer_about: "مطعم فاخر في داون تاون دبي — نار ونكهة وأناقة، تُقدَّم في قاعة هادئة وأنيقة.",
+    footer_links_t: "استكشف", footer_menu_t: "من القائمة", footer_contact_t: "تواصل معنا",
+    footer_addr: "بوليفارد بوينت، داون تاون دبي، الإمارات", footer_hours: "يوميًا 12 ظهرًا – 11 مساءً",
+    footer_copy: "© {year} أوريليا — جميع الحقوق محفوظة.", footer_dev: "تم التطوير بواسطة",
+    order_bar: "طلبك", drawer_title: "طلبك", drawer_total: "المجموع",
+    drawer_empty: "طلبك فارغ — أضف طبقًا من القائمة.",
+    drawer_wa: "اطلب عبر واتساب", drawer_note: "يفتح طلبك في واتساب — ويؤكده المطعم هناك.",
+    toast_ar: "تم التبديل إلى العربية", toast_en: "Switched to English",
+    wa_order_msg: "مرحبًا أوريليا، أريد طلب:",
+    wa_general_msg: "مرحبًا أوريليا، أريد الاستفسار.",
+    wa_res_msg: "مرحبًا أوريليا، أريد طلب حجز طاولة:",
+    add_btn: "أضف إلى الطلب", added_btn: "تمت الإضافة ✓",
+    bestseller_badge: "الأكثر مبيعًا", sample_badge: "عينة", all_cat: "الكل"
+  }
+};
+
+/* ---------------- state ---------------- */
+let lang = localStorage.getItem('aurelia-lang') || 'en';
+let activeFilter = 'all', searchQuery = '', cart = {}, galleryIdx = 0;
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const t = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const money = n => (lang === 'ar' ? 'د.إ ' : 'AED ') + n;
+const waLink = msg => 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
+let toastTimer;
+function toast(msg){ const el = $('#toast'); el.textContent = msg; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 2600); }
+
+/* ---------------- language ---------------- */
+function applyI18n(){
+  $$('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n; let v = t(k);
+    if (k === 'footer_copy') v = v.replace('{year}', new Date().getFullYear());
+    el.innerHTML = v;
+  });
+  $$('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  $$('[data-name]').forEach(el => { el.textContent = CONFIG.name[lang]; });
+}
+function setLang(l, silent){
+  lang = l; localStorage.setItem('aurelia-lang', l);
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+  $$('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  document.title = l === 'ar' ? 'أوريليا — مطعم فاخر في داون تاون دبي' : 'AURELIA — Fine Dining in Downtown Dubai | Luxury Restaurant';
+  applyI18n(); renderAll();
+  if (!silent) toast(l === 'ar' ? t('toast_ar') : t('toast_en'));
+}
+$$('.lang-toggle button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+/* ---------------- menu ---------------- */
+function renderFilters(){
+  const wrap = $('#menuFilters');
+  wrap.innerHTML = '<button class="filter-btn' + (activeFilter === 'all' ? ' active' : '') + '" data-cat="all">' + esc(t('all_cat')) + '</button>' +
+    CONFIG.categories.map(c => '<button class="filter-btn' + (activeFilter === c.id ? ' active' : '') + '" data-cat="' + c.id + '">' + esc(c[lang]) + '</button>').join('');
+  wrap.querySelectorAll('.filter-btn').forEach(b => b.addEventListener('click', () => { activeFilter = b.dataset.cat; renderFilters(); renderMenu(); }));
+}
+function dishCard(d, i){
+  const inCart = cart[d.id] || 0;
+  const cat = CONFIG.categories.find(c => c.id === d.cat);
+  return '<article class="dish" style="animation-delay:' + (i * 40) + 'ms">' +
+    '<div class="dish-img"><img src="' + d.img + '" alt="' + esc(d.name[lang]) + '" loading="lazy">' +
+    (d.bestseller ? '<span class="dish-tag">' + esc(t('bestseller_badge')) + '</span>' : '') +
+    (d.sample ? '<span class="dish-tag sample">' + esc(t('sample_badge')) + '</span>' : '') + '</div>' +
+    '<div class="dish-body"><span class="dish-cat">' + esc(cat ? cat[lang] : '') + '</span>' +
+    '<h3>' + esc(d.name[lang]) + '</h3><p>' + esc(d.desc[lang]) + '</p>' +
+    '<div class="dish-foot"><span class="dish-price">' + money(d.price) + '</span>' +
+    '<button class="add-btn' + (inCart ? ' added' : '') + '" data-add="' + d.id + '">' + (inCart ? esc(t('added_btn')) + ' (' + inCart + ')' : esc(t('add_btn'))) + '</button>' +
+    '</div></div></article>';
+}
+function renderMenu(){
+  const q = searchQuery.trim().toLowerCase();
+  const list = CONFIG.menu.filter(d => {
+    if (activeFilter !== 'all' && d.cat !== activeFilter) return false;
+    if (!q) return true;
+    const hay = (d.name.en + ' ' + d.name.ar + ' ' + d.desc.en + ' ' + d.desc.ar).toLowerCase();
+    return hay.includes(q);
+  });
+  $('#menuGrid').innerHTML = list.map(dishCard).join('');
+  $('#menuEmpty').style.display = list.length ? 'none' : 'block';
+  $$('#menuGrid [data-add]').forEach(b => b.addEventListener('click', () => addToOrder(+b.dataset.add)));
+}
+$('#menuSearch').addEventListener('input', e => { searchQuery = e.target.value; renderMenu(); });
+
+/* ---------------- order cart ---------------- */
+function cartTotal(){ return CONFIG.menu.reduce((s, d) => s + (cart[d.id] || 0) * d.price, 0); }
+function cartCount(){ return Object.values(cart).reduce((a, b) => a + b, 0); }
+function addToOrder(id){
+  cart[id] = (cart[id] || 0) + 1; renderMenu(); renderCart();
+  const d = CONFIG.menu.find(x => x.id === id);
+  toast(d.name[lang] + ' — ' + t('added_btn'));
+}
+function renderCart(){
+  const n = cartCount(), total = cartTotal();
+  $('#orderCount').textContent = n;
+  $('#orderTotal').textContent = money(total);
+  $('#drawerTotal').textContent = money(total);
+  $('#orderBar').classList.toggle('show', n > 0);
+  const items = CONFIG.menu.filter(d => cart[d.id]);
+  $('#drawerItems').innerHTML = items.length ? items.map(d =>
+    '<div class="drawer-item"><img src="' + d.img + '" alt="' + esc(d.name[lang]) + '">' +
+    '<div class="nm"><b>' + esc(d.name[lang]) + '</b><span>' + money(d.price) + '</span></div>' +
+    '<div class="qty"><button data-dec="' + d.id + '" aria-label="Decrease">−</button><span>' + cart[d.id] + '</span><button data-inc="' + d.id + '" aria-label="Increase">+</button></div>' +
+    '<b>' + money(d.price * cart[d.id]) + '</b></div>').join('')
+    : '<p class="drawer-empty">' + esc(t('drawer_empty')) + '</p>';
+  $$('#drawerItems [data-inc]').forEach(b => b.addEventListener('click', () => { cart[+b.dataset.inc]++; renderMenu(); renderCart(); }));
+  $$('#drawerItems [data-dec]').forEach(b => b.addEventListener('click', () => { const id = +b.dataset.dec; cart[id]--; if (cart[id] <= 0) delete cart[id]; renderMenu(); renderCart(); }));
+  const lines = items.map(d => '• ' + cart[d.id] + '× ' + d.name[lang] + ' — ' + money(d.price * cart[d.id]));
+  const msg = t('wa_order_msg') + '\n' + lines.join('\n') + '\n' + t('drawer_total') + ': ' + money(total);
+  $('#drawerWa').href = waLink(msg);
+}
+function openDrawer(o){ $('#orderDrawer').classList.toggle('open', o); $('#navOverlay').classList.toggle('show', o); }
+$('#orderBar').addEventListener('click', () => openDrawer(true));
+$('#orderBar').addEventListener('keydown', e => { if (e.key === 'Enter') openDrawer(true); });
+$('#drawerClose').addEventListener('click', () => openDrawer(false));
+$('#navOverlay').addEventListener('click', () => { openDrawer(false); closeMobileNav(); });
+
+/* ---------------- offers / experiences / gallery / testimonials / instagram ---------------- */
+function renderOffers(){
+  $('#offerGrid').innerHTML = CONFIG.offers.map(o =>
+    '<article class="offer-card reveal visible"><img src="' + o.img + '" alt="' + esc(o.title[lang]) + '" loading="lazy">' +
+    '<div class="offer-body"><span class="kicker">' + esc(o.tag[lang]) + '</span>' +
+    '<h3>' + esc(o.title[lang]) + '</h3><p>' + esc(o.desc[lang]) + '</p>' +
+    '<div class="offer-price">' + money(o.price) + '<s>' + money(o.was) + '</s><small>' + esc(t('sample_badge')) + '</small></div>' +
+    '<a class="btn btn-outline-dark btn-sm" href="#reservation">' + esc(t('nav_reserve')) + '</a></div></article>').join('');
+}
+function renderExperiences(){
+  $('#expGrid').innerHTML = CONFIG.experiences.map(e =>
+    '<article class="exp-card reveal visible"><img src="' + e.img + '" alt="' + esc(e.title[lang]) + '" loading="lazy">' +
+    '<div class="txt"><h3>' + esc(e.title[lang]) + '</h3><p>' + esc(e.desc[lang]) + '</p></div></article>').join('');
+}
+function renderGallery(){
+  $('#galleryGrid').innerHTML = CONFIG.gallery.map((g, i) =>
+    '<div class="g-item' + (g.wide ? ' wide' : '') + ' reveal visible" data-idx="' + i + '" role="button" tabindex="0" aria-label="' + esc(g.cap[lang]) + '">' +
+    '<img src="' + g.img + '" alt="' + esc(g.cap[lang]) + '" loading="lazy"></div>').join('');
+  $$('#galleryGrid .g-item').forEach(el => {
+    el.addEventListener('click', () => openLightbox(+el.dataset.idx));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter') openLightbox(+el.dataset.idx); });
+  });
+}
+function openLightbox(i){
+  galleryIdx = i;
+  const g = CONFIG.gallery[i];
+  $('#lbImg').src = g.img.replace('w=800', 'w=1600').replace('w=1000', 'w=1600');
+  $('#lbImg').alt = g.cap[lang];
+  $('#lbCap').textContent = g.cap[lang];
+  $('#lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){ $('#lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+function stepLightbox(d){ openLightbox((galleryIdx + d + CONFIG.gallery.length) % CONFIG.gallery.length); }
+$('#lbClose').addEventListener('click', closeLightbox);
+$('#lbPrev').addEventListener('click', () => stepLightbox(-1));
+$('#lbNext').addEventListener('click', () => stepLightbox(1));
+$('#lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!$('#lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') stepLightbox(document.documentElement.dir === 'rtl' ? 1 : -1);
+  if (e.key === 'ArrowRight') stepLightbox(document.documentElement.dir === 'rtl' ? -1 : 1);
+});
+function renderTestimonials(){
+  $('#testiGrid').innerHTML = CONFIG.testimonials.map(r =>
+    '<article class="testi reveal visible"><span class="sample-tag">' + esc(t('sample_badge')) + '</span>' +
+    '<div class="stars">' + '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars) + '</div>' +
+    '<p>“' + esc(r.text[lang]) + '”</p>' +
+    '<footer><img src="' + r.img + '" alt="' + esc(r.name) + '" loading="lazy"><div><b>' + esc(r.name) + '</b><span>' + esc(r.meta[lang]) + '</span></div></footer></article>').join('');
+}
+function renderInstagram(){
+  $('#instaGrid').innerHTML = CONFIG.instagram.map(src =>
+    '<a href="' + CONFIG.socials.instagram + '" target="_blank" rel="noopener"><img src="' + src + '" alt="AURELIA on Instagram" loading="lazy"></a>').join('');
+  $('#instaFollow').href = CONFIG.socials.instagram;
+}
+function renderSocials(){
+  const icons = {
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>',
+    facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.2 1.8 3.7 4.1 3.9v3c-1.6 0-3-.5-4.1-1.3v6.6c0 3.4-2.6 5.8-5.9 5.8A5.6 5.6 0 0 1 5 15.4c0-3.2 2.6-5.7 5.8-5.7.3 0 .7 0 1 .1v3.1c-.3-.1-.6-.2-1-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7c1.6 0 2.8-1.2 2.8-2.8V3h3z"/></svg>'
+  };
+  const html = Object.entries(CONFIG.socials).map(([k, url]) => '<a href="' + url + '" target="_blank" rel="noopener" aria-label="' + k + '">' + icons[k] + '</a>').join('');
+  $('#socials').innerHTML = html;
+  $('#socialsFoot').innerHTML = html;
+}
+function renderFooterMenu(){
+  $('#footerMenuLinks').innerHTML = CONFIG.categories.map(c =>
+    '<li><a href="#menu" data-cat-link="' + c.id + '">' + esc(c[lang]) + '</a></li>').join('');
+  $$('#footerMenuLinks [data-cat-link]').forEach(a => a.addEventListener('click', () => {
+    activeFilter = a.dataset.catLink; renderFilters(); renderMenu();
+  }));
+}
+function renderAll(){
+  renderFilters(); renderMenu(); renderOffers(); renderExperiences();
+  renderGallery(); renderTestimonials(); renderInstagram(); renderSocials(); renderFooterMenu(); renderCart();
+  $('#waFloat').href = waLink(t('wa_general_msg'));
+  $('#callBtn').href = 'tel:' + CONFIG.phoneLink;
+  const dir = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(CONFIG.mapQuery);
+  $('#dirBtn').href = dir;
+}
+
+/* ---------------- reservation ---------------- */
+(function(){
+  const d = $('#rDate'); if (d) d.min = new Date().toISOString().split('T')[0];
+})();
+function setErr(id, bad){ $(id).classList.toggle('error', bad); return !bad; }
+$('#resForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#rName').value.trim();
+  const phone = $('#rPhone').value.replace(/[\s-]/g, '');
+  const guests = $('#rGuests').value, date = $('#rDate').value, time = $('#rTime').value;
+  const email = $('#rEmail').value.trim();
+  let ok = true;
+  ok = setErr('#fName', !name) && ok;
+  ok = setErr('#fPhone', !/^\d{7,15}$/.test(phone)) && ok;
+  ok = setErr('#fGuests', !guests) && ok;
+  ok = setErr('#fDate', !date) && ok;
+  ok = setErr('#fTime', !time) && ok;
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { ok = false; }
+  if (!ok) { $('#resForm').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  const msg = t('wa_res_msg') + '\n' +
+    (lang === 'ar' ? 'الاسم: ' : 'Name: ') + name + '\n' +
+    (lang === 'ar' ? 'الهاتف: ' : 'Phone: ') + $('#rCode').value + ' ' + phone + '\n' +
+    (lang === 'ar' ? 'الضيوف: ' : 'Guests: ') + guests + '\n' +
+    (lang === 'ar' ? 'التاريخ: ' : 'Date: ') + date + '\n' +
+    (lang === 'ar' ? 'الوقت: ' : 'Time: ') + time +
+    ($('#rNotes').value.trim() ? '\n' + $('#rNotes').value.trim() : '');
+  $('#resWaBtn').href = waLink(msg);
+  $('#resSuccess').style.display = 'block';
+  $('#resSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  toast(t('res_ok_t'));
+});
+
+/* ---------------- header / nav / reveal ---------------- */
+const header = $('#siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+  const secs = ['home', 'story', 'menu', 'experiences', 'gallery', 'contact'];
+  let cur = 'home';
+  secs.forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= 120) cur = id; });
+  $$('#mainNav a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}, { passive: true });
+function closeMobileNav(){ $('#mobileNav').classList.remove('open'); $('#hamburger').classList.remove('open'); $('#hamburger').setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+$('#hamburger').addEventListener('click', () => {
+  const open = !$('#mobileNav').classList.contains('open');
+  $('#mobileNav').classList.toggle('open', open);
+  $('#hamburger').classList.toggle('open', open);
+  $('#hamburger').setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+$$('#mobileNav a').forEach(a => a.addEventListener('click', closeMobileNav));
+const io = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } }), { threshold: .12 });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* ---------------- init ---------------- */
+$('#year').textContent = new Date().getFullYear();
+setLang(lang, true);
+</script>
+</body>
+</html>
